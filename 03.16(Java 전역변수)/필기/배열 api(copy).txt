@@ -1,0 +1,7 @@
+for문에서 ,를 사용해서 추가적인 조건을 넣어줄 수 있음
+ex) for(int i=1, data=100; i <= 100; i++, data+=10)
+
+System.arraycopy(원본배열, 복사 시작 위치, 복사할 배열, 복사 받을 위치, 복사할 크기)
+
+System.arraycopy(ar, 2, arr, 0, 5)
+-> ar배열의 2번째부터 arr배열의 0번째에 5개 만큼 복사

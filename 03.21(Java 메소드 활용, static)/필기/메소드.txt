@@ -1,0 +1,11 @@
+* substring : 확장자 추출할때 많이 씀
+"abcde".substring(1,4) : 1부터 4미만까지 문자열 추출
+-> bcd
+substring(2) : 2부터 맨 마지막까지 문자열 추출
+
+* trime : 문자열 좌우 공백 제거 -> 웹 크롤링할때 사용
+
+// 정수를 문자열 타입으로
+int no = 123;
+String data = String.valueOf(no);
+

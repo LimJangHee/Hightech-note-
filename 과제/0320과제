@@ -1,0 +1,29 @@
+- 아래의 내용을 만족하는 StringUtil 클래스를 작성합니다. (1번 ~7번)
+1. 하나의 문자를 입력받아 해당 문자가 대문자이면 true 를 반환하는 isUpperChar( char c ) 메소
+드를 작성하시오
+2. 하나의 문자를 입력받아 해당 문자가 소문자이면 true를 반환하는 isLowerChar(char c) 메 소드
+를 작성하시오
+3. 두개의 숫자를 입력받아 큰수를 반환하는 max( int i, int j) 메소드를 작성하시오
+4. 두개의 숫자를 입력받아 작은수를 반환하는 min(int i, int j) 메소드를 작성하시오
+5. 문자열을 입력받아 거꾸로 변경하는 reverseString( String str ) 메소드를 작성하시오
+6. 문자열을 입력받아 대문자로 변경하는 toUpperString( String str ) 메소드를 작성하시오
+7. 문자열을 입력받아 소문자로 변경하는 toLowerString( String str ) 메소드를 작성하시오
+8. 두개의 문자열을 입력받아 문자열 크기를 비교하는 compareTo(String str, String str2) 메소드를 작성하시오.
+9. 문자열 입력받고, 검색할 문자열을 입력받아 검색할 문자열로 끝나는 endsWith(String str, String sub) 메소드 작성
+    문자열 입력 : hello world
+    검색할 문자열 입력 : ld
+    ld로 끝나는지 여부 판단 : true
+10. 문자열 입력받고, 검색할 문자열을 입력받아 검색할 문자열이 어느 위치에 있는지 검색하는 indexOf(String str, String sub) 메소드 작성
+    문자열 입력 : hello world
+    검색할 문자열 : or
+    or은 7번지에 위치함
+11. 사칙연산을 수행하는 Calculator 클래스 작성
+ 정수 : 12
+ 정수 : 5
+ 12 + 5 = 17
+ 12 - 5 = 7
+ 12 * 5 = 60
+ 12 / 5 = 2.4
+ 12 소수체크 : false
+ 5 소수체크 : true
+    

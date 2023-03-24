@@ -1,0 +1,17 @@
++ : public -> eclipse : 초록색 동그라미
+# : protected -> eeclipse : 노란색 다이아몬드
+~ : default -> eclipse : 파란색 삼각형 
+- : private -> eclipse : 빨간색 네모
+
+멤버변수의 경우 도형의 색이 비워져 있고 메소드는 도형의 색이 채워져 있음
+        
++ name : String
+# pass : String
+~ addr : String
+- money : int
+
++print(a:int):void
+public 메소드명 받는 변수는 a이고 타입이 int : 반환값은 void
+
+
+Generalization : 상속 화살표

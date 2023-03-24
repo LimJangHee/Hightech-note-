@@ -1,0 +1,11 @@
+초이스들 중 택1을 하고 싶을때 -> : 사용
+조건? 선택1(True일 경우) : 선택 2(False일 경우); -> 조건 연산자(3항 연산자)
+
+16진수
+0~9 a b c d e f
+
+제어문
+-조건문 -반복문
+
+Scanner는 Java.util이라는 패키지에 들어가 있음
+import를 통해서 해당 사용법을 가져옴(import java.util.Scanner)

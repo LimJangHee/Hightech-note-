@@ -1,0 +1,7 @@
+github에서 파일 생성시 혹은 github의 내용을 가져올시
+- pull을 하면 가져오는거고
+- fetch를 하면 branch형태로 가져옴 -> 합치고 싶으면 merge를 해줘야됨
+
+github -- fork --> my repository -- clone --> local 저장소
+(다른사람)          (내 github)
+

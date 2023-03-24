@@ -1,0 +1,11 @@
+147   0 strike 1ball
+248   0 strike 2ball
+483   1 strike 1ball
+369   1 out
+458   0 strike 2ball
+894   1 strike 1ball
+584   2 strike  0ball
+084   3 strike
+
+주어진 기회는 6번
+out 3번 나오면 기회박탈
