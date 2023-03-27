@@ -1,0 +1,18 @@
+인터페이스명에는 앞에 i를 붙여주거나 뒤에 able을 붙여주는게 일반적
+
+
+기존의 추상클래스로 상속을 했을 경우 나중에 변화나 개선을 할때 다 뜯어 고쳐야 될수도 있기 때문에
+붙여다 땟다 할 수 있게끔 옵션화 시켜 사용하는 것이 인터페이스
+
+같은 종류 끼리의 확장은 extends(실선으로) : 단일상속만 가능
+-> class가 추상class를 상속받으면 extends | interface 상속받은 interfacesms extends
+-> interface간 상속은 단일상속만 가능함
+
+확장이 아닌 실체화 시키는 개념은 implements(점선으로) : 다중상속가능
+-> class가 interface를 상속받은 경우 implements
+
+
+인터페이스는 묵시적 형변환만 가능 ex)Print 인터페이스를 상속받은 LGPrinter
+Print p = new LGPRinter()
+
+외부에서 표준화시켜서 전달하는 경우에는 인터페이스를 사용하는 것이 좋음

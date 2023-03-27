@@ -1,0 +1,21 @@
+date : deprecated현재는 거의 안 씀
+
+calender : 추상클래스라서 객체생서잉 안되기 때문에  Calendar.getInstance()를 활용
+객체 얻기 : static Calendar getInstance()
+
+abstrac class Calendar {
+
+	static Calendar getInstance() {
+
+		return new GreogorianCalendar();
+	}
+}
+
+class GregorianCalendar extends Calendar{}
+
+get() : 현재 날짜 기준 가져오기
+set() : 특정 날짜로 설정
+
+
+SimpleDateFormat : 날짜 객체로부터 원하는 형태의 문자열로 변환
+-> 특정한 포맷 문자열을 사용하여 날짜 정보를 추출
