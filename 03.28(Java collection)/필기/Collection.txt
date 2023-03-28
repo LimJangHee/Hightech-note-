@@ -1,0 +1,21 @@
+Collection
+같은 타입의 데이터들을 메모리에 저장해주는 것이 목표
+ -> 배열과 다르게 필요할때마다 공간을 유동적으로 확보
+
+배열 : 정적 자료구조
+
+Collection : 동적 자료구조
+* 스택(배열을 탑 형태로 세워놓은 형태) : 후입선출(LIFO)(입출구가 같음) ex)ctrl+z등의 복원, 메소드 호출
+* 큐(스택과 같은 형태) : 선입선출(FIFO)(입출구가 다름) 
+
+스택구조에서 입력 : push | 빼낼때 : pop
+큐구조에서 입력 : put | 빼낼때 : get
+
+
+Collection - set - sortedset
+	 - list 
+	 - queue
+
+Map - sotredmap
+
+

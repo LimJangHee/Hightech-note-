@@ -1,0 +1,17 @@
+<Set>
+중복 허용 X, 순서 X 데이터 집합
+빠른 검색 속도를 가짐
+
+-HashSet : ex) 우체통
+-TreeSet : ex) 탐색기 -> 특정 데이터 탐색은 쉽지만 전체 데이터 탑색은 오래 걸림
+  -> 트리에 있는 전체 데이터에 접근하기 위해서
+	- PREorder : Parent - Left - Right
+	- INorder : L - P - R
+	- POSTorder : L - R - P
+
+
+
+- add() : 주머니에 넣는 느낌
+  -> 그래서 index를 사용한 메소드는 어떠한것도 사용 불가
+
+- remove() : 특정 데이터 값을 가지고 있는거 삭제만 가능(인덱스 사용 불가해서)

@@ -1,0 +1,24 @@
+<List>
+인터페이스
+같은 타입의 데이터를 순차적으로 메모리에 저장하는데 크기가 유동적으로
+특징 : 중복을 허용하고, 입력된 순서를 알 수 있음(순서 존재)
+ArrayList : 배열과 비슷한 구조
+LinkedList : 데이터를 저장하고 그 다음 저장 주소의 위치값을 저장하여 기리키는 구조
+
+[ArrayList]
+- add : 데이터 추가
+- get(int index) : 해당 인덱스에 있는 값을 반환
+- size() : list크기 반환
+- remove(int i) : 인덱스 위치의 데이터 삭제
+- remove(Object o) : 해당값이 저장되어 있는 인덱스 삭제
+  -> 0번째 데이터를 삭제하면 1번째가 0번째로 됨
+  -> "봄"(저장값) 호출해서 삭제하는 경우 제일 처음에 있는 "봄"(저장값)을 삭제
+- clear() : 모든 데이터를 삭제
+- isEmpty() : boolean 값 반환, 비어있는지 아닌지 확인
+- contains(Object o) : boolean값 반환, 특정 데이터가 있는지 체크
+- addAll(Collection c) : list.addAll(sub) : list에 sub내용을 합쳐주는것, sub는 그대로 있음
+
+
+ArrayList list = new ArrayList(); -> Object형으로 받아서 모든 타입을 받을 수 있음
+그래서
+ArrayList<String> list2 = new ArrayList<String>(); -> Generic을 통해서 String만 만들수 있게 해줌 
