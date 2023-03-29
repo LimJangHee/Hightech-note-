@@ -1,0 +1,13 @@
+반복문 앞에 loop를 넣고
+continue loop;를 해주면 조건에 해당할시 loop를 넣어준 반복문으로 위치를 지정해줌
+java에서만 됨
+
+멤버변수로 생성하고 싶은 인스를 선언해주고
+해당 클래스가 인스화되서 생성될때 멤버변수로 선언한걸
+생성자에서 new를 해줘서 인스를 만들어주면 됨
+
+private Machine machine;
+
+public MC() {
+	machine = new Machine();
+}
