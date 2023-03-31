@@ -1,0 +1,7 @@
+디폴트 생성자 : alt+shift+s -> c
+매개변수 생성자 : alt+shift+s -> o
+getter/setter : alt+shift+s -> r
+
+toString() 오버라이드 : alt+shift+s -> s
+: 인스 생성하는 변수가 원래는 주소값을 출력하지만 이를 오버라이드해서 입력된 값을 출력하게 해줌
+: 개발자 출력값 테스트 용으로 자주 사용

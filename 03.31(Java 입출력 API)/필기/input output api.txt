@@ -1,0 +1,11 @@
+파일을 입출력 장치로 사용할때
+입력 : FileInputStream -> 불러오기(입력 시점에 파일이 없으면 오류)
+
+출력 : FileOutputStram -> 저장하기(저장 시점에 파일이 없으면 새로 생성)
+FileOutputStream (String filepath, boolean append)
+boolean append -> 파일이 없으면(false) 생성하고, 같은 이름의 파일이 있으면(true) 뒤에 붙여서 저장
+
+
+jpg =inputstream=> RAM =outputstream=> jpg
+
+읽은 파일의 끝을 EOF -> -1값으로 표시해줌
