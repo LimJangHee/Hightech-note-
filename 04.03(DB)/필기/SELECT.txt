@@ -1,0 +1,35 @@
+테이블1 별칭1 -> 긴 테이블명을 별칭으로 줄여서 사용
+ORDER BY : 해당 컬럼을 정렬(별칭. 컬럼)
+GROUP BY : 그룹을 짓기 위한 컬럼들 지정(별칭. 컬럼) -> SUM 등을 같이 사용
+
+< DCL(Data Control Language) >
+데이터 제어어
+GRANT(권한주기), REVOKE(권한뺏기)
+
+< TCL(Transaction Control Language) >
+트랜잭션 제어어
+COMMIT(지금까지한 데이터 처리를 실제로 반영), ROLLBACK(데이터 처리를 하기 전의 단계로 되돌리기)
+
+==================================================================================
+< SELECT 기본문형 >
+[ 순서 ] (1 TABLE 기준)
+SELECT -> FROM -> WHERE -> GROUP BY -> HAVING -> ORDER BY
+- SELECT      : <최종 결과>로 추출하고 싶은 항목(테이블의 컬럼)들을 순서대로 기술함
+- FROM       : 조건을 부여하고 결과를 추출하고 싶은 대상이 되는 <테이블>을 기술함
+- WHERE     : FROM절에 기술된 테이블의 컬럼에 대해 <조건>을 부여함
+- GROUP BY : 데이터를 그룹핑할 대상 항목(데이터의 커럼)들을 기술함 
+- HAVING    : GROUP BY했을때만 사용 가능, GROUP BY를 통해 집계한 <결과에 대한 조건>을 부여함
+EX) 월 총합이 100만원 이상인 것만 등
+- ORDER BY : 최종 결과를 표시할 때 <정렬할 순서>를 기술함
+
+
+SELECT COUNT(*) -> SELECT된 건수를 COUNT해줌
+SELECT DISTINCT OUTBOUND_BATCH, OUT_TYPE_DIV
+-> DISTINCT 중복되는 값을 제거
+WHERE 컬럼값 = 상수값
+AND 컬럼값 = 상수값
+같지 않다 연산자는 <>, = 외에도 사용할 수 있는 연산자 : <>, >, <, IN, BETWEEN, 
+
+OR는 잘 사용하지 않음 -> 범위를 줄여나가면서 서치를 해야되기 때문 AND
+
+IN ( , , ) 괄호 안에 있는 조건들 중 하나라도 만족하면

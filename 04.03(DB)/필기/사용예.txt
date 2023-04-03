@@ -1,0 +1,53 @@
+SELECT *
+  FROM LO_OUT_M
+ WHERE OUTBOUND_DATE = '2019-06-03' -- TO_DATE('20190603', 'YYYY-MM-DD')
+   AND OUTBOUND_NO = 'D190603-897837' -- 두 조건을 동시 만족
+
+
+
+SELECT *
+  FROM LO_OUT_M
+ WHERE OUTBOUND_DATE = '2019-06-03' -- 두 조건중 하나라도 만족
+    OR OUTBOUND_NO = 'D190603-897837'
+
+
+
+SELECT INVOICE_NO, OUTBOUND_BATCH, SET_TYPE_NM, SET_QTY
+  FROM LO_OUT_M
+ WHERE OUTOUND_DATE = TO_DATE('20190603', 'YYYY-MM-DD')
+   AND OUT_TYPE_DIV IN('M11', 'M12', 'M13')
+   AND WORK_SEQ BETWEEN 1 AND 2
+   AND INVOICE_NO LIKE '3467247280' || '%'; -- 3457247280으로 시작하는 모든
+ ORDER BY OUTBOUND_BATCH, SET_TYPE_NM; -- 앞에 나온 순서대로 정렬(앞에꺼로 정렬을 먼저하고 같으면 뒤어꺼 기준으로 정렬)
+-> ORDER BY SET_QTY (DESC) : 수량 오름차순으로 정렬 (내림차순으로 정렬) 
+
+
+
+SELECT DISTINCT ITEM_CD, ITEM_NM
+  FROM LO_OUT_D
+ WHERE ITEM_NM LIKE '뉴트리플랜' || '%' -- '뉴트리플랜%'
+   AND ORDER_QTY > 50
+   AND OUT_TYPE_DIV_D IN ('M12', 'M15')
+ GROUP BY ITEM_CD, ITEM_NM -- 기재되어 있는 항목 내에 있는것들을 그룹으로 지어서 하나로 -> COUNT했을시 하나로   
+ ORDER BY ITEM_NM; 
+
+
+
+SELECT OUTBOUND_BATCH, SET_TYPE_NM, SUM(SET_QTY) AS SUM_SET_QTY -- SUM함수를 적용하고 거기에 별칭을 붙여줌
+   FROM LO_OUT_M
+ WHERE OUTBOUND_DATE = TO_DATE('20190603', 'YYYY-MM-DD')
+   AND OUT_TYPE_DIV IN ('M11', 'M12', 'M13')
+   AND WORK_SEQ BETWEEN 1 AND 2
+   AND INVOICE_NO LIKE '346724728' || '%'
+  GROUP BY OUTBOUND_BATCH, SET_TYPE_NM -- 똑같은 애들을 그룹화하여
+ HAVING SUM(SET+QTY) = 1 -- SUM이라는 함수를 적용했을시 그 값이 1인 애들만
+  ORDER BY OUTBOUND_BATCH, SET_TYPE_NM;
+
+
+
+SELECT 1 AS NO -- 오라클에서만 제공됨 : 1컬럼 1행 임시 테이블 생성
+   FROM DUAL 
+
+
+ROWNUM -- 오라클에서만 제공됨 : 레코드에 번호를 집어
+   
