@@ -1,0 +1,66 @@
+ SELECT ROWNUM AS RNUM, -> 순서를 멕여서 이것을 RUNM이라 지칭
+           BRAND_CD, INVOICE_NO, ITEM_CD, ORDER_QTY
+  FROM (
+       SELECT BRAND_CD, INVOICE_NO, ITEM_CD, ORDER_QTY
+         FROM A_OUT_D
+        WHERE INVOICE_NO LIKE '#0%'
+          AND ORDER_QTY >= 3
+        ORDER BY ORDER_QTY DESC, ITEM_CD
+          )
+ WHERE ROWNUM <= 2
+
+안에서 만들어진 결과물을 임시 테이블로 만들어서 FROM에 넣어줌
+그 결과물에 ROWNUM을 통해서 순번을 먹이고 범위 지정을 해서 TOP N을 구해줄 수 있음
+순번 범위 지정을 할때는  ROWNUM 그대로 사용하는게 좋음(정해준 변수가 변경될 수도 있기 때문)
+
+====================================================================
+SELECT COUNT(DISTINCT INVOICE_NO) -- INVOICE_NO중에 중복되지 않는 자료만 카운트
+  FROM A_OUT_D
+
+======================================================================
+GROUP BY 지정한 컬럼만 ORDER BY에서 사용 가능 단 SUM과 같은 것들은  GROUP BY에 안해도 ORDER BY로 지정가능
+예외)
+SELECT BRAND_CD, ITEM_CD, SUM(ORDER_QTY) AS SUM_QTY
+  FROM A_OUT_D
+ GROUP BY BRAND_CD, ITEM_CD
+ ORDER BY BRAND_CD, SUM(ORDER_QTY) DESC 
+
+=========================================================================
+HAVING은 SELECT에서의 COUNT같은 것들에 조건을 걸어주는 용도로 사용
+SELECT BRAND_CD, OUTBOUND_DATE, COUNT(INVOICE_NO)
+  FROM A_OUT_M
+ GROUP BY BRAND_CD, OUTBOUND_DATE
+ HAVING COUNT(*) = 2 
+ ORDER BY BRAND_CD, OUTBOUND_DATE
+
+==========================================================================
+SELECT BRAND_CD, MAX(SUM_QTY), MIN(SUM_QTY)
+  FROM (
+ 
+        SELECT BRAND_CD, ITEM_CD, SUM(ORDER_QTY) AS SUM_QTY
+          FROM A_OUT_D
+         GROUP BY BRAND_CD, ITEM_CD
+         ORDER BY BRAND_CD, ITEM_CD
+       )
+ GROUP BY BRAND_CD
+ ORDER BY BRAND_CD
+
+==========================================================================
+UNION ALL 다음 SELECT문과 합침
+
+SELECT COUNT(*)           AS CNT1
+       ,COUNT(CD)          AS CNT2                                                 
+       ,COUNT(DISTINCT CD) AS CNT3
+       ,COUNT(QTY)         AS CNT4
+       ,COUNT(1)           AS CNT5 -- 모든 레코드에 1을 부여하고 이것을 카운트
+       ,COUNT(CONST)       AS CNT6
+   FROM (
+         SELECT CD, QTY, '폴리텍' AS CONST -- 모든레코드에 폴리텍을 부여하고 컬럼 이름을 CONST로      
+           FROM (
+                 SELECT 'A' AS CD, 1    AS QTY FROM DUAL UNION ALL
+                 SELECT 'B' AS CD, 2    AS QTY FROM DUAL UNION ALL
+                 SELECT 'C' AS CD, NULL AS QTY FROM DUAL UNION ALL
+                 SELECT 'C' AS CD, 4    AS QTY FROM DUAL UNION ALL
+                 SELECT 'E' AS CD, 5    AS QTY FROM DUAL
+                 )
+        )

@@ -1,0 +1,16 @@
+SELECT OUTBOUND_DATE
+       ,INVOICE_NO
+       ,OUT_TYPE_DIV
+  FROM LO_OUT_M M1
+ WHERE M1.OUTBOUND_DATE = '2019-09-03'
+   AND M1.INVOICE_NO BETWEEN '352613619120' AND '352613619150'
+   AND EXISTS(
+              SELECT 1
+                FROM LO_OUT_D S1
+               WHERE S1.INVOICE_NO = M1.INVOICE_NO
+                 AND S1.ORDER_QTY > 100
+              )
+
+EXISTS이전의 구문부터 먼저 실행하고 EXISTS를 그 이후에 실행
+EXISTS : 결과에 영향을 미침
+
