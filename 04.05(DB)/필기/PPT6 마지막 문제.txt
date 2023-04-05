@@ -1,0 +1,25 @@
+SELECT SYSDATE : 현재 시간 AS CUR_DATETIME
+         ,TRUNC(SYSDATE)               AS CUR_DATE
+         ,SUBSTR('ABCD1234', 1, 5)     AS VAL1                         -> SUBSTRING : 문자열에서 범위를 지정해 해당값을 가져오는 것
+         ,LPAD(34, 5, '0')                  AS LEFT_PADDING             -> 34라는 숫자를 총 5자리로 표현하고 빈자리의 왼쪽부터 0으로 채우기
+         ,SUBSTR(LPAD(34, 5, '0'), 1, 3) AS LEFT_PADDING_SUBSTR1 -> 첫번째 부터 세번째 
+         ,SUBSTR(LPAD(34, 5, '0'), 4, 2) AS LEFT_PADDING-SUBSTR2 -> 네번째값 오른쪽으로 2개
+         ,SUBSTR(OUT_TYPE_DIV, 1, 2) AS SUB_VAL                      -> 해당 컬럼의 값에 모두 적용해서  
+         ,OUT_TYPE_DIV || '-' || OUT_BOX_DIV AS AAA                  -> 두개의 칼럼 값을 합치고 그 사이에 -를 집어넣음
+         ,LENGTH(INVOICE_NO)         AS BBB
+         ,TO_CHAR(OUTBOUND_DATE, 'YYYY-MM') AS CCC
+         ,TO_CHAR(OUTBOUND_DATE, 'YYYYMM') AS DDD
+         ,TO_CHAR(OUTBOUND_DATE, 'YY-MM') AS EEE
+         ,TO_CHAR(OUTBOUND_DATE, 'MM-DD') AS FFF
+         ,TO_CHAR(OUTBOUND_DATE, 'WW') AS GGG
+         ,TO_CHAR(OUTBOUND_DATE, 'Q') AS HHH     
+FROM DUAL : 레코드 하나짜리 임의의 테이블 -> 컬럼 숫자는 상관없음
+
+TO_CHAR, TO_NUMBER : 문자열, 숫자타입으로 변경
+
+
+
+SELECT MAX(LPAD(ORDER_QTY, 3, '0') || LPAD(LINE_NO, 3, '0')) AS MAX_VAL
+FROM LO_OUT_D S1
+WHERE S1.INVOICE_NO = '~'
+- ORDER_QTY, LINE_NO를 
