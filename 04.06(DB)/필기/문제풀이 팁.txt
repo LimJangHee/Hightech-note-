@@ -1,0 +1,14 @@
+NVL(입력되고 값이 있을시 반환되는 값, NULL일 경우 반환되는 값)
+-> 양쪽 타입이 같아야 되기 때문에 만약 숫자일 경우 문자열 타입으로 변환해 주면 됨
+
+DECODE(SUBSTR(OUT_TYPE_DIV, 1, 2), 'M1', '상온', 'M2', '냉장')
+
+
+컬럼           연산자 값
+OUT_BOX_DIV LIKE CASE
+
+CONDITION에 대한 값을 CASE별로 WHEN을 하는거기 때문에
+CASE문에서는 값만 나와야 됨
+
+
+COUNT(1) -> 전체를 카운트 할때

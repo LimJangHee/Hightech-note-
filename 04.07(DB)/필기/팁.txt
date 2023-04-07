@@ -1,0 +1,3 @@
+GROUP BY를 하는 이유는 가로 조건 개수가 2개 이상일때
+조건문에서 NULL이냐 아니냐를 비교할때는 IS NULL이라고 해줘야됨
+CASE문 안에는 ASC DESC를 RETURN해주지 못함
