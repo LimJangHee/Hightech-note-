@@ -1,0 +1,10 @@
+cat > index.html
+Hello, World~~~
+ctrl c
+
+cat >> index.html
+()
+ctrl c
+
+
+

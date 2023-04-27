@@ -1,0 +1,21 @@
+인스턴스 생성
+
+세부정보에서 
+#!/bin/bash
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+yum  install httpd -y
+echo ""$INSTANCE_ID"" >> /var/www/html/index.html
+service httpd start
+
+대상 그룹 생성 -> 이름
+
+로드밸런서 생성 -> 이름, 매핑, 대상 그룹 선택
+
+
+ec2 -> elastic ip
+
+
+홈페이지로 사용할 인스턴스 ip를 변경
+13.209.36.83
+인스턴스
+탄력적 ip 주소 연결
