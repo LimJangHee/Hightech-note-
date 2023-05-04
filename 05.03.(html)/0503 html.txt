@@ -1,0 +1,18 @@
+live preview
+prettier
+! enter
+ctrl / : 주석 생성
+
+terminal -> new terminal -> git init(로컬에 생성) -> github에서 레퍼지토리 생성
+-> git remote add origin https://github.com/LimJangHee/class-html.git
+
+-> git add . (모든 파일을 스테이징)
+-> git commit -m "원하는 내용" (커밋)
+-> git log
+-> git push -u origin master (github으로 푸쉬)
+
+
+
+일반 input
+input submit
+action

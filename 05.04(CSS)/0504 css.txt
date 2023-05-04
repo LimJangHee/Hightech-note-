@@ -1,0 +1,34 @@
+h1~6: 글자 크기 지정 숫자 크기가 커질수록 작아짐
+div : 영역을 나누는 태그 -> 전체 라인 하나에 대한 영역 생성
+span : 영역을 나누는 태그 -> 라인 하나의 부분에 대한 영역 생성
+
+<video src="~" width="~" controls></video> -> controls넣어줘야 플레이 및 조정 가능
+영상등과 같은 자료들의 경우 출력하고 싶은 자료 타입(mp4 등) 순서대로 코드를 추가해주고
+만약에 해당하는 자료타입이 없는경우에 대한 출력을 맨 밑에 작성해주면 됨
+
+iframe : 외부 영상 가져오기
+
+view -> world wrap : 긴 코드를 밑으로 내려주는
+
+plugin : Auto rename tag(Jun Han) -> 태그 변경시 뒤에 태크도 같이 변경해주는 플러그인
+
+commit convention으로 검색해서 commit하는 메세지 공부해볼것
+
+github 프로필 정리 해볼것
+https://velog.io/@gomdorij/Github%EA%B9%83%ED%97%88%EB%B8%8C-%ED%94%84%EB%A1%9C%ED%95%84-%EA%BE%B8%EB%AF%B8%EA%B8%B0
+
+class는 중복해서 만들수 있음
+text-align: center; -> 가운데 정렬
+
+.center -> enter -> center class를 지정한 div생성
+#box1 -> enter -> box1 id를 지정한 div 생성
+
+.center.red-font -> enter -> center, red-font class 생성
+
+div*3 -> enter -> div 3개 생성
+
+table>tr*3>td*4 -> enter -> tr3, td4개짜리 테이블 생성
+
+.div_class*3>span.span_class*3
+
+.left+.center+.right
