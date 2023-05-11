@@ -1,0 +1,29 @@
+초기화 하지 않고 변수 선언만 미리 하지 말것
+실습 5 이메일 형식인지 여부 확인 -> 정규식(regular expression)으로 유효성 확인
+
+// 이메일 형식 체크 정규식
+function validEmail(obj){
+    console.log(obj)
+    if(validEmailCheck(obj)==false){ // 이메일 형식에 맞지 않을 때
+        result.textContent = '이메일 형식으로 입력해주세요. ex) xxx@000.000' ;
+        result.style.color = "red";
+        // obj.value='';            // 형식에 맞지 않을 때 공백 처리
+        obj.focus();
+        return false;
+    }else{
+        result.textContent = '올바른 메일 형식입니다.' 
+        result.style.color = "blue";
+    }
+}
+
+function validEmailCheck(obj){  
+    var pattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    return (obj.value.match(pattern)!=null)
+
+
+https://regexr.com/ -> 정규식 확인해주는 사이트
+
+sprite image
+
+콘솔에서 $('#pompom').css('left') -> 픽셀 위치 확인(left 대신 right등으로 각 위치 확인 가능)
+
