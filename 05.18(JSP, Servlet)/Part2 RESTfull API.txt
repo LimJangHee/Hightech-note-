@@ -1,0 +1,43 @@
+<RESTful API>
+기술이 아닌 아키텍쳐
+REST(Representational State Transfer) -> 리소스의 상태를 전달하는
+DB가 동시다발적으로 다양한 곳에서 생성되고 있는데 이를 접근하는데 어려움을 겪음
+RESTful 를 통해서 서버가 표준 형식으로 정보를 전송함을 나타냄
+
+- REST 아키텍쳐
+-> 무상태 : 각 요청마다 별개의 독립적으로 요청 
+
+쿠키 : 서버에 접속해 있는 클라이언트의 정보를 저장
+온디맨드 코드 : 필요에 의해
+
+
+RESTful API 3대 구성요소
+* URI(Uniform Resource Identifier)
+* 행위
+* representation : 행위 제한자 &basDT 등
+
+
+URI 구성요소 4가지(public에서 제공하는 경우 퍼주기만 하기 때문에 get만 사용 하지만 회사 내부에서는 서로 교류, 수정, 삭제를 해야되기 때문에 필요)
+GET :
+POST : 서버에 줄때마다 새롭게 누적
+PUT : 서버에 줄때 기존거를 지우고 덮어 씌움
+DELETE :
+
+
+apache : 정적인 서버 -> tomcat을 통해서 정적인 서버로
+
+http//api.data.go.kr/main.html 혹은 a.html
+앞 도메인만 적으면 index.html을 그냥 가져오는거고, 뒤에까지 적으면 아파치 서버에 있는거를 가져온다
+
+tomcat : url, 기능이 넘어오면
+
+slient                   server
+        <-logi결과 page- putlogin/servlet 
+-----------------------------
+ID, PW <- ->         Tomcat
+-----------------------------
+browser <- http -> apache
+
+멀티 쓰레드 방식
+서블릿 -> 서버쪽에서 작동하기 때문에 클라인트 쪽에서 보이지 않음
+

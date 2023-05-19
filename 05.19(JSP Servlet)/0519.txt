@@ -1,0 +1,11 @@
+아파치 : html파일만 주고 받을 수 있음
+그래서 tomcat을 같이 설치해야됨
+
+hostname : 밖에서 보이는 이름
+
+whale browser??
+
+외부 접근은 포트로 이루어지며 이에 대한 보안을 window defender 방화벽으로 
+
+상위 src/main/java -> java 파일들
+하위 src

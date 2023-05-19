@@ -1,0 +1,11 @@
+https://apis.data.go.kr/
+1160100/service/GetStockSecuritiesInfoService/
+getStockPriceInfo
+?serviceKey=9Wo5ceBuQP2of31srXx36ocRJt8ODz1M3qr2YacKJy24bcPQoMjuEcvoR0pqYLGx%2FLvLjdOWpfmdHwsFFpxVSA%3D%3D
+&basDt=20230515
+-> https : http 프로토콜에 보안이 추가
+-> apis.data.go.kr: 도메인 주소
+-> 1160100/service/GetStockSecuritiesInfoService : 폴더
+-> getStockPriceInfo? : 기능
+-> ?serviceKey=9Wo5ceBuQP2of31srXx36ocRJt8ODz1M3qr2YacKJy24bcPQoMjuEcvoR0pqYLGx%2FLvLjdOWpfmdHwsFFpxVSA%3D%3D : 서비스 키
+-> &basDt=20230515 : &뒤에 변수/조건 추가

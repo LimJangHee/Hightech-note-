@@ -1,0 +1,29 @@
+<Java & Servlet>
+
+동적으로 행동할 수 있게 하는것 : RESTfull api
+웹에서 동작을 하는것 자체에 대한 코딩 : servlet -> 1대 1로 대응하게 페이지로 만들어 놓은것 JSP
+동작을 하게끔 만들어 놓은 객체 : Tomcat
+
+정적인 웹 페이지면 : static 페이지
+동적인 웹 페이지면 : dynamic 페이지 -> db에 있는 데이터를 가져와서 이를 적용해서 말해주는 페이지
+-> 내가 원하는 정보를 보여줄 수 있게끔 하는게 interaction
+
+
+Java - JDBC - DB
+
+servlet : 골조를 세운다고 생각하면 됨
+
+
+
+https://www.data.go.kr/
+-> 도메인 주소
+-> IP주소와 1대1로 매칭
+
+실제로는 https://www.data.go.kr/index.html로 요청된거임
+
+https://www.data.go.kr/API함수명?변수1명=변수1값&변수2명=변수2값
+
+API함수명
+-> get, put, post, delete
+
+결과는 xml
