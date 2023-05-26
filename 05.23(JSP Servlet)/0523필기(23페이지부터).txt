@@ -1,0 +1,25 @@
+<JSP>
+자바와 html 같이
+JSP를 브라우저에서 호출 -> html파일들은 해석 가능, java코드들은 servlet으로 변환 -> servlet lifecycle
+
+JSP -> 많이 사용되는 기능 내장객체, Action Tag
+EL
+JSTL : 태그
+
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+-> jsp파일임을 의미
+
+여기 안에 자바 코드가 들어감
+
+<%@ %> : 페이지 전체에 영향을 미치는 코드들 (import 등) 
+<%! > : 변수 선언, 함수 선언
+<% %> : 그 밖에 조건문 같은 것들
+
+<%@ include file="head.jsp" %> : 사용된 위치에 해당하는 파일을 불러옴
+
+request는 탭이 닫히거나 화면이 넘어갈 경우 바로 초기화 됨(넘겨주는 역활만)
+-> onepage와 twopage의 request는 서로 다른 request인 거임
+session에 저장할 경우 브라우저 종료 전까지 계속 확인 가능 -> 단 종료할 경우 다 리셋되어 버림
+application의 경우 브라우저를 종료하더라도 계속 저장 되어 있음 -> 서버를 종료해야 초기화 됨
+
