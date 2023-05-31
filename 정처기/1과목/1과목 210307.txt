@@ -17,6 +17,10 @@
 오답 : 소프트웨어 사용자들에게 사용 방법을 신속히 숙지시키기 위해 사용된다.
 
 12. UML(Unified Modeling Language)에 대한 설명 중 틀린 것은?
+- 기능적 모델은 사용자 측면에서 본 시스템 기능이며, UML에서는 Use case Diagram을 사용한다.
+- 정적 모델은 객체, 속성, 연관관계, 오퍼레이션의 시스템의 구조를 나타내며, UML에서는 Class Diagram을 사용한다.
+- 동적 모델은 시스템의 내부 동작을 말하며, UML에서는 Sequence Diagram, State Diagram, Activity Diagram을 사용한다.
+
 State Diagram : 객체가 가진 상태와 상태 변환을 나타냄
 Sequence Diagram : 객체 사이에 오가는 메시지를 시간순으로 나타냄
 
