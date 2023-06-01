@@ -102,7 +102,7 @@ COCOMO(Constructive Cost Model) 모형의 특징이 아닌 것은?
 
 18.
 Authorization : 권한부여
-Authentication : 신원을 시스템이 증명하는 과정, 아이대 패스워드 입력
+Authentication : 신원을 시스템이 증명하는 과정, 아이디 패스워드 입력
 
 19.
 SDN(Software Defined Networking)
