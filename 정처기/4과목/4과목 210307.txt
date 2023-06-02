@@ -1,0 +1,36 @@
+3. 제어 프로그램
+1) 감시 프로그램 (Supervisor) : 프로그램과 시스템 작동상태를 감시 감독
+2) 작업 제어 프로그램 (Job Control) : 작업의 연속 처리를 위한 스케줄 및 시스템 자원 할당 등을 담당
+3) 데이터 관리 프로그램 (Data Management) ​: 주기억장치와 보조기억장치 사이의 데이터 전송, 파일과 데이터를 처리 유지 보수 기능 수행
+오답 : 서비스 프로그램
+
+6. 교착상태가 발생할 수 있는 조건이 아닌 것은?
+- 상호 배제(mutual exclusion)
+- 점유와 대기(hold and wait)
+- 비선점(Non-preemption)
+
+오답 : linear wait
+
+8. tcp : 트랜스포트 계층
+
+11. 
+- atoi() : char to int : 문자를 정수로
+- atof() : char to double : 문자를 부동 소수점으로
+- itoa() : int to char : 정수를 문자로
+- ceil() : 소수점값이 나올 때 무조건 올림
+
+12. 운영체제의 가상기억장치 관리에서 프로세스가 일정 시간동안 자주 참조하는 페이지들의 집합을 의미하는 것은?
+-> working set
+
+13.
+자스제외공내
+
+14.
+고정된 크기의 일정한 블록으로 나누는 : paging
+가변적인 크기의 블록으로 나누는 : segmentation
+
+17. UDP 특성에 해당되는 것은?
+흐름제어나 순서제어가 없어 전송속도가 빠르다.
+
+20. WAS(Web Application Server)가 아닌 것은?
+-> JVM : Java Virtual Machine
