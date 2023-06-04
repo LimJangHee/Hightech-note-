@@ -1,0 +1,52 @@
+공유 폴더 -> +
+jspsdk경로
+/mnt
+자동 마운트
+
+시스템
+16416
+프로세서
+8개
+
+브라우저에서 
+tar.gz
+wget 경로 복사
+tar zxvf ap하고 탭
+cd ap 탭
+cd bin
+./startup.sh
+
+sudo apt-get install openjdk-11-jdk
+
+sudo apsudot-get insatll vim
+
+sudo vim /etc/profile
+
+맨뒤에 
+exprt JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 -> esc
+:wq
+
+./startup.sh
+./shutdown.sh
+
+cd webapps/
+cd /mnt
+
+sudo mkdir SharedFolder
+
+cd Downloads/
+cd ~/ap tab
+cd webapps/
+cp ~/Downloads/BoardLab.war
+
+cd bin
+./startup.sh
+sudo mount JSPSDK./SharedFolder/
+
+
+unzip 
+cd h2
+cd
+
+~/h2/bin$ 에서 sudo chmod +x h2.sh
+./h2.sh

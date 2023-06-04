@@ -1,0 +1,23 @@
+create table USERS(
+  ID VARCHAR2(8) PRIMARY KEY,
+  PASSWORD VARCHAR2(8),
+  NAME VARCHAR2(20),
+  ROLE VARCHAR2(5)
+)
+
+insert into USERS values('admin', 'admin', 'admin', 'Admin')
+insert into USERS values('guset', 'guest', 'guest', 'User')
+
+select * from USERS
+
+create table BOARD(
+  SEQ NUMBER(5) PRIMARY KEY,
+  TITLE VARCHAR2(200),
+  WRITER VARCHAR2(20),
+  CONTENT VARCHAR2(2000),
+  REGDATE DATE DEFAULT CURRENT_DATE
+)
+
+insert into board(SEQ, TITLE, WRITER, CONTENT) values(1, 'hello', 'guest', 'hello world!!')
+
+select * from BOARD
